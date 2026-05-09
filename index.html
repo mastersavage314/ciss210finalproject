@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CISS 210 Men's Lacrosse Stats System</title>
+  <meta name="description" content="A CISS 210 final project by Nicholas Lagitch featuring sourced NCAA, NJCAA, and history-based men's lacrosse team statistics, player leaders, goalie stats, and team colors.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.ciss210menslax.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ciss210menslax.com/">
+  <meta property="og:title" content="CISS 210 Men's Lacrosse Stats System">
+  <meta property="og:description" content="A student-built men's lacrosse statistics system for NCAA, NJCAA, and history-based team profiles.">
+  <meta property="og:image" content="https://www.ciss210menslax.com/assets/lacrosse-field-hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0f3a35">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CISS 210 Men's Lacrosse Stats System",
+      "url": "https://www.ciss210menslax.com/",
+      "description": "A CISS 210 final project by Nicholas Lagitch featuring sourced NCAA, NJCAA, and history-based men's lacrosse statistics.",
+      "creator": {
+        "@type": "Person",
+        "name": "Nicholas Lagitch",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Hudson Valley Community College"
+        }
+      },
+      "educationalUse": "CISS 210 Final Project",
+      "isAccessibleForFree": true
+    }
+  </script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__overlay">
+      <nav class="topbar" aria-label="Project information">
+        <span class="brand">CISS 210 Final Project</span>
+        <a class="status site-url" href="https://www.ciss210menslax.com/">www.ciss210menslax.com</a>
+      </nav>
+
+      <section class="hero__content">
+        <p class="eyebrow">2025-26 NCAA men's lacrosse data explorer</p>
+        <h1>Men's Lacrosse Stats System</h1>
+        <p class="hero__copy">
+          Explore sourced team, player, and season statistics across NCAA Division I, Division II, Division III, and JUCO men's lacrosse.
+        </p>
+        <p class="disclaimer">
+          This website is a student project for CISS 210. It is not associated with, sponsored by, or endorsed by the NCAA or NJCAA.
+        </p>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <section class="selector-band" aria-labelledby="selector-title">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Choose a team</p>
+          <h2 id="selector-title">Division Dropdown Menus</h2>
+          <p>
+            Select a team from Division I, Division II, Division III, or JUCO to load its team profile, colors, source credits, and entered stat tables.
+          </p>
+        </div>
+
+        <div class="selectors" aria-label="Team selectors">
+          <label>
+            <span>Division I</span>
+            <select id="division-i-select" data-division="D1">
+              <option value="">Select D1 team</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Division II</span>
+            <select id="division-ii-select" data-division="D2">
+              <option value="">Select D2 team</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Division III</span>
+            <select id="division-iii-select" data-division="D3">
+              <option value="">Select D3 team</option>
+            </select>
+          </label>
+
+          <label>
+            <span>JUCO</span>
+            <select id="juco-select" data-division="JUCO">
+              <option value="">Select JUCO team</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-band" aria-live="polite">
+      <div class="section-inner">
+        <div id="dashboard" class="dashboard"></div>
+      </div>
+    </section>
+
+    <section class="sources-band" aria-labelledby="sources-title">
+      <div class="section-inner">
+        <div class="section-heading compact">
+          <p class="eyebrow">Credits</p>
+          <h2 id="sources-title">Statistics Sources</h2>
+          <p>
+            Data was entered from official school athletics, NCAA, and NJCAA statistics resources. When a current page did not publish totals, the profile clearly labels a history-based estimate from recent public statistics.
+          </p>
+        </div>
+        <div id="source-list" class="source-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Created by Nicholas Lagitch, Student at Hudson Valley Community College, for CISS 210 Final Project.
+      Official trademarks, team names, and source data belong to their respective schools and organizations.
+    </p>
+  </footer>
+
+  <script src="stats-completions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
